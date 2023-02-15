@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  dotnet-core-oidc:
+    env_file: .env
+    build:
+      context: .
+    ports:
+      - 7230:7230
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:7230
+      - ASPNETCORE_ENVIRONMENT=Development
