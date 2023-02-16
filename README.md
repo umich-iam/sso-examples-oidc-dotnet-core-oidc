@@ -7,7 +7,7 @@ OIDC credentials can be obtained from IAM by submitting a Shibboleth Configurati
 https://documentation.its.umich.edu/node/767 . You will receive the Client Id and Client Secret after your Shibb Configuration Request is complete. 
 
 For local setup of this example project:
-- Create the `.env` file that docker-compose.yml is looking for (more information on env files here: https://docs.docker.com/compose/environment-variables/env-file/).
+- Create the `.env` file that docker-compose.yml is looking for in the same directory (more information on env files here: https://docs.docker.com/compose/environment-variables/env-file/).
 - Set environment variables `ASPNETCORE_OIDC_ID` and `ASPNETCORE_OIDC_SECRET`, and assign the Client Id and Client Secret values you were provided with, respectively.
 - If necessary, change the environment variables `ASPNETCORE_URLS` and `ASPNETCORE_ENVIRONMENT` in docker-compose.yml to values that makes sense for your setup.
 - Start the container with the `docker-compose up --build -d`

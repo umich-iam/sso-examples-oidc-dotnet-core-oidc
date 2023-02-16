@@ -13,8 +13,7 @@ builder.Services.AddAuthentication(options =>
     .AddCookie("Cookies")
     .AddOpenIdConnect("oidc", options =>
     {
-        options.Authority = "https://accounts.google.com";
-        //options.Authority = "https://shibboleth.umich.edu/";
+        options.Authority = "https://shibboleth.umich.edu/";
         options.SignInScheme = "Cookies";
         options.ClientId = builder.Configuration.GetValue<string>("OIDC_ID");
         options.ClientSecret = builder.Configuration.GetValue<string>("OIDC_SECRET");
